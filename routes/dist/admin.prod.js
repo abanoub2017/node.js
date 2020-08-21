@@ -1,0 +1,1 @@
+"use strict";var path=require("path"),rootDir=require("../helper/path"),experss=require("express"),router=experss.Router(),posts=[];router.get("/add-posts",function(t,e,r){e.sendFile(path.join(rootDir,"views","add-posts.html"))}),router.post("/add-posts",function(t,e,r){posts.push({title:t.body.title}),e.redirect("/")}),exports.routes=router,exports.posts=posts;

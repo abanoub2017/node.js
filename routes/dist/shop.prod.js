@@ -1,0 +1,1 @@
+"use strict";var express=require("express"),router=express.Router();router.get("/",function(e,r,o){console.log("in onther Middleware"),r.send("<h1>Hello form express</h2>")}),module.exports=router;
