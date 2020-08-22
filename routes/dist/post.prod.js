@@ -1,1 +1,0 @@
-"use strict";var path=require("path"),express=require("express"),rootDir=require("../helper/path"),adminData=require("./admin"),router=express.Router();router.get("/",function(e,r,t){var s=adminData.posts;r.sendFile(path.join(rootDir,"views","posts.html"),{pos:s,docTitle:"posts page"})}),module.exports=router;
