@@ -7,7 +7,8 @@ const router = experss.Router();
 const posts = []
 
 router.get('/add-posts',(req , res , next) => {
-    res.sendFile(path.join(rootDir , 'views' , 'add-posts.html'))
+    res.render('add-posts', {title:'Add Posts' , path: 'admin/add-posts'})
+    // res.sendFile(path.join(rootDir , 'views' , 'add-posts.html'))
 })
 
 router.post('/add-posts' , (req, res , next) => {

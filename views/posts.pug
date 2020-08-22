@@ -1,0 +1,14 @@
+extends  layouts/main-layout.pug
+
+
+block content
+      h1 My Posts
+        if pos.length > 0 
+            each post in pos
+                .card
+                    img(src="http://www.nretnil.com/avatar/LawrenceEzekielAmos.png" alt="Avatar")
+                    .container
+                    h4
+                        p #{post.title}   
+        else 
+            h1 No posts

@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> {{title}}</title>
+    <link rel="stylesheet" href="/css/main.css">
+
+</head>
+<body>
+    <header>
+        <ul>
+            <li>
+              <a href="/">
+                Posts
+              </a>  
+            </li>
+            <li>
+                <a href="/admin/add-posts">
+                    Add Post
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <main>
+        <h1>My Posts</h1>
+        {{#if pos}}
+           {{#each pos}}
+            <div class="card">
+                    <img src="http://www.nretnil.com/avatar/LawrenceEzekielAmos.png" alt="Avatar">
+                    <div class="container">
+                        <p>{{this.title}}</p> 
+                    </div>
+            </div>
+            {{/each}}
+        {{ else }}
+          <h1>No Posts</h1>
+        {{/if}}
+    </main>
+    
+</body>
+</html>

@@ -11,9 +11,10 @@ var adminData = require('./admin');
 var router = express.Router();
 router.get('/', function (req, res, next) {
   var posts = adminData.posts;
-  res.sendFile(path.join(rootDir, 'views', 'posts.html'), {
+  res.render('posts', {
     pos: posts,
-    docTitle: 'posts page'
+    title: 'Posts ',
+    path: '/'
   });
 });
 module.exports = router;

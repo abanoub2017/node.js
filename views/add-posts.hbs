@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Posts</title>
+    <link rel="stylesheet" href="/css/posts.css">
+</head>
+<body>
+    <header>
+        <ul>
+            <li>
+              <a href="/">
+                Posts
+              </a>  
+            </li>
+            <li>
+                <a href="/admin/add-posts">
+                    Add Post
+                </a>
+            </li>
+        </ul>
+    </header>
+
+    <main>
+        <form action="/admin/add-posts" method="POST">
+         <input type="text" name="title">
+         <button type="submit">Add Post</button>
+        </form>
+    </main>
+    
+</body>
+</html>
